@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jakob Hollweck, doctoral researcher in theoretical physics at Friedrich Schiller University Jena. Conformal field theory, infrared physics and holography.">
+  <meta name="theme-color" content="#ffffff">
+  <title>Jakob Hollweck | Theoretical Physics</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <style>
+    :root { color-scheme: light; --paper:#ffffff; --ink:#000000; --muted:#000000; --link:#006400; --rule:#000000; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:24px; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:"New Century Schoolbook",serif; font-size:16px; line-height:24px; text-align:justify; }
+    main { width:min(780px,calc(100% - 48px)); margin:20px auto 0; }
+    a { color:var(--link); text-decoration-thickness:1px; text-underline-offset:3px; }
+    a:hover { color:var(--link); text-decoration-thickness:2px; }
+    a:focus-visible, summary:focus-visible { outline:2px solid var(--link); outline-offset:5px; }
+    .skip { position:absolute; top:-100px; left:20px; padding:8px 14px; background:var(--paper); }
+    .skip:focus { top:8px; }
+    header { display:grid; grid-template-columns:minmax(0,1fr) 218px; gap:24px; align-items:center; padding-bottom:16px; border-bottom:2px solid var(--rule); text-align:left; }
+    h1 { font-size:36px; font-weight:bold; line-height:1.15; letter-spacing:normal; margin:0 0 18px; }
+    .affiliation { margin:0 0 12px; line-height:24px; }
+    .email { overflow-wrap:anywhere; }
+    .email-with-mailbox { display:inline-flex; align-items:center; gap:9px; max-width:100%; }
+    .email-with-mailbox span { min-width:0; }
+    .mailbox { width:40px; height:36px; flex:0 0 40px; overflow:visible; shape-rendering:crispEdges; }
+    .mailbox-letter { animation:mail-delivery 4.8s steps(5,end) 1; }
+    .mailbox-flag { transform-origin:29px 24px; animation:mail-flag 4.8s steps(3,end) 1; }
+    .email-with-mailbox:hover .mailbox-letter { animation:mail-delivery-replay 4.8s steps(5,end) infinite; }
+    .email-with-mailbox:hover .mailbox-flag { animation:mail-flag-replay 4.8s steps(3,end) infinite; }
+    @keyframes mail-delivery {
+      0%,12% { transform:translate(8px,-6px) rotate(12deg); opacity:0; }
+      20%,38% { transform:translate(0,0); opacity:1; }
+      57%,100% { transform:translate(-12px,11px); opacity:0; }
+    }
+    @keyframes mail-delivery-replay {
+      0%,12% { transform:translate(8px,-6px) rotate(12deg); opacity:0; }
+      20%,38% { transform:translate(0,0); opacity:1; }
+      57%,100% { transform:translate(-12px,11px); opacity:0; }
+    }
+    @keyframes mail-flag { 0%,40% { transform:rotate(90deg); } 58%,100% { transform:rotate(0); } }
+    @keyframes mail-flag-replay { 0%,40% { transform:rotate(90deg); } 58%,100% { transform:rotate(0); } }
+    .construction { font-size:14px; font-style:italic; margin:12px 0 0; }
+    .profiles { margin:7px 0 0; display:flex; gap:20px; }
+    .portrait { width:218px; height:290px; object-fit:cover; object-position:center 47%; display:block; border:2px solid #000; padding:0; background:#fff; }
+    section { padding:12px 0; border-bottom:2px solid var(--rule); }
+    section p { margin:0 0 12px; }
+    section p:last-child { margin-bottom:0; }
+    h2 { font-size:20px; font-weight:bold; line-height:24px; margin:0 0 12px; text-align:left; }
+    h3 { font-size:16px; font-weight:bold; font-style:normal; margin:16px 0 4px; text-align:left; }
+    ul { padding-left:24px; margin:12px 0 18px; }
+    li { padding-left:3px; margin-bottom:5px; }
+    .intro { font-size:16px; }
+    .availability { padding-left:0; border-left:none; }
+    .section-head { display:flex; align-items:baseline; justify-content:space-between; gap:20px; margin-bottom:12px; text-align:left; }
+    .section-head h2 { margin:0; }
+    .section-head a { font-size:14px; white-space:nowrap; }
+    .papers { margin:0; padding-left:27px; }
+    .papers li { padding-left:7px; margin-bottom:16px; }
+    .papers li:last-child { margin-bottom:0; }
+    .papers li::marker { color:var(--muted); font-size:16px; }
+    .paper-title { font-size:16px; font-weight:bold; text-decoration:none; }
+    .authors,.paper-links { font-size:16px; line-height:24px; }
+    .authors { color:var(--muted); margin-top:3px; }
+    .paper-links { display:flex; gap:8px 16px; flex-wrap:wrap; margin-top:3px; }
+    .summary { font-size:16px; margin-top:4px; line-height:24px; }
+    footer { display:flex; flex-wrap:wrap; justify-content:space-between; gap:12px; font-size:13px; color:var(--muted); padding:12px 0 30px; text-align:left; }
+    footer p { margin:0; }
+    @media (max-width:620px) {
+      body { font-size:16px; text-align:left; }
+      main { width:calc(100% - 36px); margin-top:20px; }
+      header { grid-template-columns:minmax(0,1fr) 120px; gap:18px; align-items:start; padding-bottom:16px; }
+      h1 { font-size:29px; letter-spacing:normal; }
+      .portrait { width:120px; height:170px; }
+      .affiliation,.email,.profiles { font-size:14px; }
+      .profiles { gap:14px; }
+      .intro { font-size:16px; }
+      .section-head { align-items:start; }
+      .section-head a { max-width:105px; white-space:normal; text-align:right; }
+    }
+    @media (max-width:370px) {
+      header { grid-template-columns:minmax(0,1fr) 96px; gap:13px; }
+      .portrait { width:96px; height:144px; }
+      h1 { font-size:26px; }
+    }
+    @media (prefers-reduced-motion:reduce) {
+      html { scroll-behavior:auto; }
+      .email-with-mailbox .mailbox-letter,
+      .email-with-mailbox .mailbox-flag { animation:none; }
+      .mailbox-letter { opacity:0; }
+    }
+    @media print { main { width:100%; margin:0; } .skip { display:none; } body { font-size:11pt; background:white; } section { break-inside:avoid; } a { color:inherit; } footer { padding-bottom:0; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#about">Skip to content</a>
+  <main>
+    <header id="top">
+      <div>
+        <h1>Jakob Hollweck</h1>
+        <p class="affiliation">Theoretisch-Physikalisches Institut<br>Friedrich-Schiller Universität Jena<br>Jena, Germany</p>
+        <a class="email email-with-mailbox" href="mailto:jakob.hollweck@uni-jena.de"><svg class="mailbox" viewBox="0 0 44 40" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#786043" d="M20 25h5v13h-5z"/>
+          <path fill="#a78960" d="M20 25h2v13h-2z"/>
+          <path fill="#3b493c" d="M9 36h3v-2h2v3h17v-2h2v2h3v2H9z"/>
+          <g class="mailbox-letter" opacity="0">
+            <path fill="#383d35" d="M27 3h14v10H27z"/>
+            <path fill="#fffdf0" d="M28 4h12v8H28z"/>
+            <path fill="none" stroke="#a89c7e" stroke-width="1" d="m28 4 6 5 6-5"/>
+            <path fill="#b85246" d="M37 5h2v2h-2z"/>
+          </g>
+          <path fill="#344238" d="M5 17v-4h2v-3h3V8h19v2h4v3h2v15H5z"/>
+          <path fill="#6e8b6c" d="M12 10h16v2h4v3h1v11H15V15h-1v-3h-2z"/>
+          <path fill="#9eb495" d="M12 10h16v2H14v3h-2z"/>
+          <path fill="#b4c4a5" d="M7 15h2v-3h3v3h1v11H7z"/>
+          <path fill="#25372e" d="M8 18h4v2H8z"/>
+          <path fill="#dae0c8" d="M8 23h3v1H8zM17 24h13v1H17z"/>
+          <g class="mailbox-flag">
+            <path fill="#633c35" d="M28 12h2v13h-2z"/>
+            <path fill="#a74135" d="M29 11h8v6h-8z"/>
+            <path fill="#d56a50" d="M30 12h6v2h-6z"/>
+          </g>
+          <path fill="#e1c786" d="M28 23h2v2h-2z"/>
+        </svg><span>jakob.hollweck@uni-jena.de</span></a>
+        <p class="profiles"><a href="https://inspirehep.net/authors/2803121">INSPIRE-HEP</a><a href="https://orcid.org/0000-0001-8454-2568">ORCID</a></p>
+      </div>
+      <img class="portrait" src="assets/jakob-hollweck.jpg" alt="Jakob Hollweck sitting outside at a café" width="218" height="290" fetchpriority="high">
+    </header>
+    <section id="about" aria-label="About">
+      <p class="intro">I am a doctoral researcher in theoretical physics at Friedrich Schiller University Jena, working with Martin Ammon.</p>
+      <p class="availability">I am seeking postdoctoral positions starting in 2027.</p>
+    </section>
+    <section id="research" aria-labelledby="research-heading">
+      <h2 id="research-heading">Research</h2>
+      <p class="construction">Under construction...</p>
+    </section>
+    <section id="papers" aria-labelledby="papers-heading">
+      <div class="section-head"><h2 id="papers-heading">Papers and preprints</h2><a href="https://inspirehep.net/authors/2803121">Full record on INSPIRE</a></div>
+      <ol class="papers" reversed>
+        <li>
+          <a class="paper-title" href="https://arxiv.org/abs/2608.18205">A generating functional for infrared-safe QED amplitudes</a>
+          <div class="authors">With Martin Ammon, Konrad Brandts and Federico Capone.</div>
+          <div class="paper-links"><span>Preprint (2026)</span><a href="https://arxiv.org/abs/2608.18205">arXiv:2608.18205</a></div>
+          <div class="summary">A coherent-state generating functional incorporating Faddeev–Kulish dressings, with a path-integral description at tree level.</div>
+        </li>
+        <li>
+          <a class="paper-title" href="https://arxiv.org/abs/2606.18345">Exponentiation of higher-point and higher-genus Virasoro conformal blocks in the semiclassical limit</a>
+          <div class="authors">With Marius Gerbershagen.</div>
+          <div class="paper-links"><a href="https://doi.org/10.1007/JHEP09(2026)047">JHEP 09 (2026) 047</a><a href="https://arxiv.org/abs/2606.18345">arXiv:2606.18345</a></div>
+          <div class="summary">A proof of semiclassical exponentiation for general channels and higher genus, understood as a formal power series.</div>
+        </li>
+        <li>
+          <a class="paper-title" href="https://arxiv.org/abs/2507.22974">Thermal n-point conformal blocks in four dimensions from oscillator representations</a>
+          <div class="authors">With Martin Ammon, Tobias Hössel and Katharina Wölfl.</div>
+          <div class="paper-links"><a href="https://doi.org/10.1007/JHEP04(2026)102">JHEP 04 (2026) 102</a><a href="https://arxiv.org/abs/2507.22974">arXiv:2507.22974</a></div>
+          <div class="summary">Thermal blocks in the projection channel for scalar external operators and scalar exchange.</div>
+        </li>
+        <li>
+          <a class="paper-title" href="https://arxiv.org/abs/2406.19436">Conformal blocks in two and four dimensions from oscillator representations</a>
+          <div class="authors">With Martin Ammon, Tobias Hössel and Katharina Wölfl.</div>
+          <div class="paper-links"><a href="https://doi.org/10.1007/JHEP05(2025)091">JHEP 05 (2025) 091</a><a href="https://arxiv.org/abs/2406.19436">arXiv:2406.19436</a></div>
+          <div class="summary">Oscillator methods for higher-point global blocks in two dimensions and their extension to four dimensions.</div>
+        </li>
+      </ol>
+    </section>
+    <footer><p>The design of this website is inspired by <a href="https://i-saberi.github.io/">Ingmar A. Saberi’s homepage</a>.</p><a href="#top">Back to top</a></footer>
+  </main>
+</body>
+</html>
